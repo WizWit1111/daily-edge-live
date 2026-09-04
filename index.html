@@ -1,369 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0b0f14"
+  >
+
   <title>The Daily Edge</title>
 
   <style>
+
     :root {
-      --bg: #0b0f14;
-      --panel: #111822;
-      --panel-2: #151f2b;
-      --border: #253244;
-      --text: #f5f7fa;
-      --muted: #8fa0b3;
-      --green: #32d583;
-      --yellow: #f6c85f;
-      --red: #ff6b6b;
-      --blue: #6aa7ff;
-      --purple: #9b7cff;
+      --bg:#0b0f14;
+      --panel:#111822;
+      --panel2:#151f2b;
+      --border:#253244;
+      --text:#f5f7fa;
+      --muted:#8fa0b3;
+      --green:#32d583;
+      --yellow:#f6c85f;
+      --red:#ff6b6b;
+      --blue:#6aa7ff;
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing:border-box;
     }
 
     body {
-      margin: 0;
-      background: linear-gradient(180deg, #0a0e13 0%, #0d131b 100%);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin:0;
+      background:
+        linear-gradient(
+          180deg,
+          #0a0e13 0%,
+          #0d131b 100%
+        );
+      color:var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
     }
 
     .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 22px 16px 60px;
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px 16px 60px;
     }
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 20px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:12px;
     }
 
     .brand {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
+      font-size:30px;
+      font-weight:900;
+      letter-spacing:.04em;
     }
 
     .subtitle {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 14px;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:14px;
     }
 
     .status-pill {
-      border: 1px solid rgba(50, 213, 131, 0.35);
-      background: rgba(50, 213, 131, 0.10);
-      color: var(--green);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
+      border:
+        1px solid rgba(50,213,131,.35);
+      background:
+        rgba(50,213,131,.10);
+      color:var(--green);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .updated {
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:20px;
+    }
+
+    .updated strong {
+      color:var(--text);
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
+      display:grid;
+      grid-template-columns:
+        repeat(12,1fr);
+      gap:14px;
     }
 
     .card {
-      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      background:
+        linear-gradient(
+          180deg,
+          var(--panel) 0%,
+          var(--panel2) 100%
+        );
+      border:
+        1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:
+        0 8px 24px rgba(0,0,0,.18);
     }
 
-    .span-12 { grid-column: span 12; }
-    .span-8 { grid-column: span 8; }
-    .span-6 { grid-column: span 6; }
-    .span-4 { grid-column: span 4; }
+    .span12 {grid-column:span 12;}
+    .span8 {grid-column:span 8;}
+    .span6 {grid-column:span 6;}
+    .span4 {grid-column:span 4;}
 
     .eyebrow {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:8px;
     }
 
     .decision {
-      font-size: 38px;
-      font-weight: 900;
-      margin: 2px 0 8px;
+      font-size:38px;
+      font-weight:900;
+      margin:2px 0 8px;
     }
 
-    .play { color: var(--green); }
-    .lean { color: var(--yellow); }
-    .pass { color: var(--red); }
+    .play {color:var(--green);}
+    .lean {color:var(--yellow);}
+    .pass {color:var(--red);}
 
     .metric-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 14px;
+      display:grid;
+      grid-template-columns:
+        repeat(4,1fr);
+      gap:10px;
+      margin-top:14px;
     }
 
     .metric {
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.02);
-      border-radius: 14px;
-      padding: 14px;
+      border:
+        1px solid var(--border);
+      background:
+        rgba(255,255,255,.02);
+      border-radius:14px;
+      padding:14px;
     }
 
     .metric .label {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 6px;
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:6px;
     }
 
     .metric .value {
-      font-size: 22px;
-      font-weight: 800;
+      font-size:22px;
+      font-weight:900;
     }
 
     .legs {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
+      display:grid;
+      gap:10px;
+      margin-top:14px;
     }
 
     .leg {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      padding: 14px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: rgba(255,255,255,0.02);
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:12px;
+      padding:14px;
+      border:
+        1px solid var(--border);
+      border-radius:14px;
+      background:
+        rgba(255,255,255,.02);
     }
 
     .leg-name {
-      font-size: 16px;
-      font-weight: 800;
+      font-size:16px;
+      font-weight:900;
     }
 
     .leg-side {
-      margin-top: 4px;
-      color: var(--green);
-      font-weight: 700;
+      margin-top:4px;
+      font-weight:800;
+    }
+
+    .more {
+      color:var(--green);
+    }
+
+    .less {
+      color:var(--blue);
     }
 
     .leg-prob {
-      text-align: right;
+      text-align:right;
     }
 
     .leg-prob strong {
-      display: block;
-      font-size: 20px;
+      display:block;
+      font-size:20px;
     }
 
     .small {
-      color: var(--muted);
-      font-size: 12px;
+      color:var(--muted);
+      font-size:12px;
     }
 
     .section-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 12px;
+      font-size:18px;
+      font-weight:900;
+      margin-bottom:12px;
     }
 
     table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
     }
 
-    th, td {
-      padding: 10px 8px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
+    th,td {
+      padding:10px 8px;
+      border-bottom:
+        1px solid var(--border);
+      text-align:left;
     }
 
     th {
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 12px;
+      color:var(--muted);
+      font-weight:800;
+      font-size:12px;
     }
 
     .good {
-      color: var(--green);
-      font-weight: 700;
+      color:var(--green);
+      font-weight:800;
     }
 
     .warn {
-      color: var(--yellow);
-      font-weight: 700;
+      color:var(--yellow);
+      font-weight:800;
     }
 
     .bad {
-      color: var(--red);
-      font-weight: 700;
+      color:var(--red);
+      font-weight:800;
     }
 
-    .footer-note {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
-      margin-top: 20px;
+    .footer {
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+      margin-top:20px;
     }
 
-    .model-tag {
-      color: var(--blue);
-      font-weight: 700;
+    .model {
+      color:var(--blue);
+      font-weight:800;
     }
 
-    @media (max-width: 760px) {
+    .refresh {
+      display:inline-block;
+      margin-top:12px;
+      padding:10px 14px;
+      border-radius:12px;
+      border:
+        1px solid var(--border);
+      background:var(--panel2);
+      color:var(--text);
+      text-decoration:none;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    @media(max-width:760px) {
+
       .topbar {
-        flex-direction: column;
+        flex-direction:column;
       }
 
-      .span-8,
-      .span-6,
-      .span-4 {
-        grid-column: span 12;
+      .span8,
+      .span6,
+      .span4 {
+        grid-column:span 12;
       }
 
       .metric-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .decision {
-        font-size: 32px;
+        font-size:32px;
       }
     }
+
   </style>
+
 </head>
 
 <body>
+
   <div class="wrap">
 
     <div class="topbar">
+
       <div>
-        <div class="brand">THE DAILY EDGE</div>
+        <div class="brand">
+          THE DAILY EDGE
+        </div>
+
         <div class="subtitle">
-          Live Analytics Dashboard · MLB Pitcher Strikeouts
+          Live Analytics Dashboard
+          · MLB Pitcher Strikeouts
         </div>
       </div>
 
       <div class="status-pill">
         LIVE MODEL
       </div>
+
+    </div>
+
+    <div class="updated">
+      LAST UPDATED:
+      <strong>
+        September 4, 2026 • 12:01 AM PT
+      </strong>
+      · Engine 33846227915
     </div>
 
     <div class="grid">
 
-      <div class="card span-8">
-        <div class="eyebrow">Best 3-Man Power</div>
+      <div class="card span8">
 
-        <div class="decision play">PLAY ✅</div>
+        <div class="eyebrow">
+          Best 3-Man Power
+        </div>
+
+        <div class="decision pass">
+          PASS ⛔
+        </div>
 
         <div class="small">
-          Model version: <span class="model-tag">V1.2.2</span>
+          Engine:
+          <span class="model">
+            V1.2.2
+          </span>
+          · Publisher:
+          <span class="model">
+            V1.2.3
+          </span>
         </div>
 
         <div class="legs">
+          
+    <div class="leg">
+      <div>
+        <div class="leg-name">
+          Jameson Taillon
+        </div>
 
-          <div class="leg">
-            <div>
-              <div class="leg-name">Jameson Taillon</div>
-              <div class="leg-side">MORE 2.5 Ks</div>
-              <div class="small">TOR vs KC</div>
-            </div>
+        <div class="leg-side more">
+          MORE 2.5 Ks
+        </div>
+      </div>
 
-            <div class="leg-prob">
-              <strong>61.9%</strong>
-              <span class="small">Conservative</span>
-            </div>
-          </div>
+      <div class="leg-prob">
+        <strong>
+          63.1%
+        </strong>
+        <span class="small">
+          Conservative
+        </span>
+      </div>
+    </div>
+    
+    <div class="leg">
+      <div>
+        <div class="leg-name">
+          Cristopher Sánchez
+        </div>
 
-          <div class="leg">
-            <div>
-              <div class="leg-name">Jared Jones</div>
-              <div class="leg-side">MORE 5.5 Ks</div>
-              <div class="small">LAA vs PIT</div>
-            </div>
+        <div class="leg-side more">
+          MORE 6.5 Ks
+        </div>
+      </div>
 
-            <div class="leg-prob">
-              <strong>56.7%</strong>
-              <span class="small">Conservative</span>
-            </div>
-          </div>
+      <div class="leg-prob">
+        <strong>
+          58.1%
+        </strong>
+        <span class="small">
+          Conservative
+        </span>
+      </div>
+    </div>
+    
+    <div class="leg">
+      <div>
+        <div class="leg-name">
+          Ryan Feltner
+        </div>
 
-          <div class="leg">
-            <div>
-              <div class="leg-name">Cristopher Sánchez</div>
-              <div class="leg-side">MORE 6.5 Ks</div>
-              <div class="small">ATL vs PHI</div>
-            </div>
+        <div class="leg-side more">
+          MORE 3.5 Ks
+        </div>
+      </div>
 
-            <div class="leg-prob">
-              <strong>56.1%</strong>
-              <span class="small">Conservative</span>
-            </div>
-          </div>
-
+      <div class="leg-prob">
+        <strong>
+          57.0%
+        </strong>
+        <span class="small">
+          Conservative
+        </span>
+      </div>
+    </div>
+    
         </div>
 
         <div class="metric-row">
+
           <div class="metric">
-            <div class="label">Payout</div>
-            <div class="value">6x</div>
+            <div class="label">
+              Payout
+            </div>
+            <div class="value">
+              6x
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Joint Prob.</div>
-            <div class="value">19.13%</div>
+            <div class="label">
+              Joint Prob.
+            </div>
+            <div class="value">
+              20.27%
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Break-even</div>
-            <div class="value">16.67%</div>
+            <div class="label">
+              Break-even
+            </div>
+            <div class="value">
+              16.67%
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Stake</div>
-            <div class="value">1.0u</div>
+            <div class="label">
+              Model Stake
+            </div>
+            <div class="value">
+              1.08u
+            </div>
           </div>
+
         </div>
+
       </div>
 
-      <div class="card span-4">
-        <div class="eyebrow">Entry Health</div>
-        <div class="section-title">Model Confidence</div>
+      <div class="card span4">
 
-        <div class="metric" style="margin-bottom:10px;">
-          <div class="label">Conservative ROI</div>
-          <div class="value good">+14.8%</div>
+        <div class="eyebrow">
+          Entry Health
         </div>
 
-        <div class="metric" style="margin-bottom:10px;">
-          <div class="label">Stress ROI</div>
-          <div class="value good">+3.3%</div>
+        <div class="section-title">
+          Model Confidence
+        </div>
+
+        <div
+          class="metric"
+          style="margin-bottom:10px"
+        >
+          <div class="label">
+            Conservative ROI
+          </div>
+
+          <div class="value good">
+            +21.6%
+          </div>
+        </div>
+
+        <div
+          class="metric"
+          style="margin-bottom:10px"
+        >
+          <div class="label">
+            Stress ROI
+          </div>
+
+          <div class="value good">
+            +9.7%
+          </div>
         </div>
 
         <div class="metric">
-          <div class="label">Same-Game Pairs</div>
-          <div class="value">0</div>
+          <div class="label">
+            Same-Game Pairs
+          </div>
+
+          <div class="value">
+            0
+          </div>
         </div>
+
       </div>
 
-      <div class="card span-12">
-        <div class="eyebrow">Qualified Pitcher-K Props</div>
-        <div class="section-title">Current Model Board</div>
+      <div class="card span12">
 
-        <div style="overflow-x:auto;">
+        <div class="eyebrow">
+          Qualified Pitcher-K Props
+        </div>
+
+        <div class="section-title">
+          Current Model Board
+        </div>
+
+        <div style="overflow-x:auto">
+
           <table>
+
             <thead>
               <tr>
                 <th>Player</th>
@@ -377,113 +556,200 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td>Jameson Taillon</td>
-                <td>MORE</td>
-                <td>2.5</td>
-                <td>67.8%</td>
-                <td>52.9%</td>
-                <td>61.9%</td>
-                <td class="good">QUALIFIED</td>
-              </tr>
-
-              <tr>
-                <td>Jared Jones</td>
-                <td>MORE</td>
-                <td>5.5</td>
-                <td>59.7%</td>
-                <td>52.2%</td>
-                <td>56.7%</td>
-                <td class="good">QUALIFIED</td>
-              </tr>
-
-              <tr>
-                <td>Cristopher Sánchez</td>
-                <td>MORE</td>
-                <td>6.5</td>
-                <td>59.3%</td>
-                <td>51.1%</td>
-                <td>56.1%</td>
-                <td class="good">QUALIFIED</td>
-              </tr>
+              
+    <tr>
+      <td>Jameson Taillon</td>
+      <td>MORE</td>
+      <td>2.5</td>
+      <td>69.7%</td>
+      <td>52.9%</td>
+      <td>63.1%</td>
+      <td class="good">QUALIFIED</td>
+    </tr>
+    
+    <tr>
+      <td>Cristopher Sánchez</td>
+      <td>MORE</td>
+      <td>6.5</td>
+      <td>62.4%</td>
+      <td>51.2%</td>
+      <td>58.1%</td>
+      <td class="good">QUALIFIED</td>
+    </tr>
+    
+    <tr>
+      <td>Ryan Feltner</td>
+      <td>MORE</td>
+      <td>3.5</td>
+      <td>60.1%</td>
+      <td>52.4%</td>
+      <td>57.0%</td>
+      <td class="good">QUALIFIED</td>
+    </tr>
+    
             </tbody>
+
           </table>
+
         </div>
+
       </div>
 
-      <div class="card span-6">
-        <div class="eyebrow">Bankroll</div>
-        <div class="section-title">Current Position</div>
+      <div class="card span6">
+
+        <div class="eyebrow">
+          Bankroll
+        </div>
+
+        <div class="section-title">
+          Current Position
+        </div>
 
         <div class="metric-row">
+
           <div class="metric">
-            <div class="label">Starting</div>
-            <div class="value">$100</div>
+            <div class="label">
+              Starting
+            </div>
+            <div class="value">
+              $100
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Current</div>
-            <div class="value">$100</div>
+            <div class="label">
+              Current
+            </div>
+            <div class="value">
+              $100
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Unit</div>
-            <div class="value">$1</div>
+            <div class="label">
+              Unit
+            </div>
+            <div class="value">
+              $1
+            </div>
           </div>
 
           <div class="metric">
-            <div class="label">Official Bets</div>
-            <div class="value">0</div>
+            <div class="label">
+              Official Bets
+            </div>
+            <div class="value">
+              0
+            </div>
           </div>
+
         </div>
+
       </div>
 
-      <div class="card span-6">
-        <div class="eyebrow">System Status</div>
-        <div class="section-title">Model Inputs</div>
+      <div class="card span6">
+
+        <div class="eyebrow">
+          System Status
+        </div>
+
+        <div class="section-title">
+          Model Inputs
+        </div>
 
         <table>
           <tbody>
+
             <tr>
-              <td>PrizePicks live board</td>
-              <td class="good">ACTIVE</td>
+              <td>
+                PrizePicks live board
+              </td>
+              <td class="good">
+                ACTIVE
+              </td>
             </tr>
 
             <tr>
-              <td>Sportsbook no-vig market</td>
-              <td class="good">ACTIVE</td>
+              <td>
+                Sportsbook no-vig market
+              </td>
+              <td class="good">
+                ACTIVE
+              </td>
             </tr>
 
             <tr>
-              <td>Baseball Savant skill data</td>
-              <td class="good">ACTIVE</td>
+              <td>
+                Baseball Savant
+              </td>
+              <td class="good">
+                ACTIVE
+              </td>
             </tr>
 
             <tr>
-              <td>Opponent K profile</td>
-              <td class="good">ACTIVE</td>
+              <td>
+                Opponent K profile
+              </td>
+              <td class="good">
+                ACTIVE
+              </td>
             </tr>
 
             <tr>
-              <td>Recent workload</td>
-              <td class="good">ACTIVE</td>
+              <td>
+                Recent workload
+              </td>
+              <td class="good">
+                ACTIVE
+              </td>
             </tr>
 
             <tr>
-              <td>Lineup / handedness / weather</td>
-              <td class="warn">V1.3</td>
+              <td>
+                Lineup / handedness /
+                weather
+              </td>
+              <td class="warn">
+                V1.3
+              </td>
             </tr>
+
           </tbody>
         </table>
+
+        <a
+          class="refresh"
+          href=""
+          onclick="
+            location.reload();
+            return false;
+          "
+        >
+          ↻ Refresh Dashboard
+        </a>
+
       </div>
 
     </div>
 
-    <div class="footer-note">
-      The Daily Edge is an analytics tool. Model probabilities and expected-value estimates are not guarantees of outcomes.
-      Confirm all lines, sides, and displayed payouts immediately before entering any contest.
+    <div class="footer">
+
+      The Daily Edge is an analytics tool.
+      Model probabilities and expected-value
+      estimates are not guarantees.
+
+      Confirm every PrizePicks line, side,
+      player availability and displayed payout
+      immediately before submitting an entry.
+
+      A PLAY classification means the entry
+      passed the model's current safeguards;
+      it does not guarantee a winning result.
+
     </div>
 
   </div>
+
 </body>
 </html>
