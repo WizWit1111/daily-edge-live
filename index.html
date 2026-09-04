@@ -8,555 +8,270 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=device-width, initial-scale=1"
   >
 
   <meta
     name="theme-color"
-    content="#0b0f14"
+    content="#080d13"
   >
 
-  <title>
-    The Daily Edge
-  </title>
+  <title>The Daily Edge</title>
 
   <style>
-
-    :root {
-
-      --bg:#0b0f14;
-      --panel:#111822;
-      --panel2:#182331;
-      --border:#27384d;
-      --text:#f5f7fa;
-      --muted:#91a2b7;
-      --green:#32d583;
-      --yellow:#f6c85f;
-      --red:#ff656c;
-      --blue:#6aa7ff;
-
-    }
-
 
     * {
       box-sizing:border-box;
     }
 
-
     body {
-
       margin:0;
-
-      background:
-        linear-gradient(
-          180deg,
-          #090e14,
-          #0d141d
-        );
-
-      color:var(--text);
-
+      background:#080d13;
+      color:#f5f7fa;
       font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
         sans-serif;
-
     }
 
-
-    .wrap {
-
-      max-width:1100px;
-
+    .page {
+      max-width:900px;
       margin:auto;
-
-      padding:
-        24px
-        16px
-        70px;
-
+      padding:28px 18px 70px;
     }
 
-
-    .topbar {
-
-      display:flex;
-
-      justify-content:
-        space-between;
-
-      gap:16px;
-
-      align-items:
-        flex-start;
-
-    }
-
-
-    .brand {
-
-      font-size:32px;
-
-      font-weight:950;
-
+    h1 {
+      margin:0;
+      font-size:38px;
       letter-spacing:.04em;
-
     }
-
 
     .subtitle {
-
-      margin-top:7px;
-
-      color:var(--muted);
-
-      font-size:15px;
-
+      color:#93a4b8;
+      margin-top:8px;
+      font-size:17px;
     }
-
 
     .live {
-
-      color:var(--green);
-
-      border:
-        1px solid
-        rgba(50,213,131,.45);
-
-      background:
-        rgba(50,213,131,.08);
-
-      padding:
-        10px
-        14px;
-
+      display:inline-block;
+      margin-top:22px;
+      padding:11px 16px;
       border-radius:999px;
-
+      border:1px solid #218b5d;
+      color:#35d58a;
       font-weight:900;
-
-      white-space:nowrap;
-
+      background:#0d2119;
     }
-
 
     .updated {
-
-      margin:
-        20px
-        0;
-
-      color:var(--muted);
-
-      font-size:13px;
-
+      margin:25px 0;
+      color:#93a4b8;
       line-height:1.5;
-
     }
-
 
     .updated strong {
-      color:var(--text);
+      color:#f5f7fa;
     }
-
-
-    .grid {
-
-      display:grid;
-
-      grid-template-columns:
-        repeat(12,1fr);
-
-      gap:14px;
-
-    }
-
 
     .card {
-
-      background:
-        linear-gradient(
-          180deg,
-          var(--panel),
-          var(--panel2)
-        );
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:20px;
-
-      padding:20px;
-
+      background:#111a25;
+      border:1px solid #2a3b50;
+      border-radius:22px;
+      padding:22px;
+      margin-bottom:18px;
     }
-
-
-    .span12 {
-      grid-column:span 12;
-    }
-
-    .span8 {
-      grid-column:span 8;
-    }
-
-    .span6 {
-      grid-column:span 6;
-    }
-
-    .span4 {
-      grid-column:span 4;
-    }
-
 
     .eyebrow {
-
-      color:var(--muted);
-
-      font-size:12px;
-
+      color:#96a8bd;
+      font-size:13px;
       font-weight:900;
-
-      letter-spacing:.16em;
-
-      text-transform:uppercase;
-
+      letter-spacing:.15em;
     }
-
 
     .decision {
-
-      margin:
-        14px
-        0
-        8px;
-
-      font-size:44px;
-
+      font-size:48px;
       font-weight:950;
-
+      margin:15px 0 6px;
     }
 
-
     .play {
-      color:var(--green);
+      color:#35d58a;
     }
 
     .lean {
-      color:var(--yellow);
+      color:#f3c95f;
     }
 
     .pass {
-      color:var(--red);
+      color:#ff676e;
     }
 
-
-    .small {
-
-      color:var(--muted);
-
-      font-size:12px;
-
-    }
-
-
-    .model {
-
-      color:var(--blue);
-
+    .official {
+      margin-bottom:20px;
+      font-size:13px;
       font-weight:900;
-
+      color:#ff8a90;
     }
 
+    .official.play-note {
+      color:#35d58a;
+    }
+
+    .version {
+      color:#93a4b8;
+      margin-bottom:18px;
+    }
+
+    .version b {
+      color:#72aaff;
+    }
 
     .legs {
-
       display:grid;
-
       gap:12px;
-
-      margin-top:20px;
-
     }
-
 
     .leg {
-
       display:grid;
-
-      grid-template-columns:
-        1fr auto;
-
-      gap:14px;
-
-      padding:16px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:16px;
-
-      background:
-        rgba(255,255,255,.02);
-
+      grid-template-columns:1fr auto;
+      gap:12px;
+      padding:17px;
+      border:1px solid #2a3b50;
+      border-radius:17px;
+      background:#172231;
     }
 
-
-    .leg-name {
-
-      font-size:18px;
-
+    .player {
+      font-size:20px;
       font-weight:950;
-
     }
 
-
-    .leg-side {
-
+    .side {
       margin-top:5px;
-
+      font-size:17px;
       font-weight:900;
-
     }
-
 
     .more {
-      color:var(--green);
+      color:#35d58a;
     }
 
     .less {
-      color:var(--blue);
+      color:#70a9ff;
     }
 
-
-    .leg-prob {
-
+    .prob {
       text-align:right;
-
     }
 
-
-    .leg-prob strong {
-
+    .prob strong {
       display:block;
-
-      font-size:24px;
-
+      font-size:27px;
     }
 
+    .prob span {
+      display:block;
+      color:#93a4b8;
+      font-size:12px;
+      margin-top:3px;
+    }
 
-    .metric-row {
-
+    .metrics {
       display:grid;
-
       grid-template-columns:
-        repeat(4,1fr);
-
+        repeat(2,1fr);
       gap:12px;
-
       margin-top:18px;
-
     }
-
 
     .metric {
-
-      padding:16px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:16px;
-
-      background:
-        rgba(255,255,255,.02);
-
+      background:#172231;
+      border:1px solid #2a3b50;
+      border-radius:17px;
+      padding:17px;
     }
 
-
-    .label {
-
-      color:var(--muted);
-
-      font-size:12px;
-
-      margin-bottom:7px;
-
+    .metric-label {
+      color:#93a4b8;
+      font-size:13px;
     }
 
-
-    .value {
-
-      font-size:24px;
-
+    .metric-value {
+      margin-top:8px;
+      font-size:28px;
       font-weight:950;
-
     }
 
+    .positive {
+      color:#35d58a;
+    }
+
+    .negative {
+      color:#ff676e;
+    }
 
     .section-title {
-
-      margin:
-        7px
-        0
-        14px;
-
-      font-size:20px;
-
+      font-size:21px;
       font-weight:950;
-
+      margin:8px 0 17px;
     }
 
-
-    table {
-
-      width:100%;
-
-      border-collapse:collapse;
-
-      font-size:14px;
-
+    .health {
+      display:grid;
+      grid-template-columns:
+        repeat(2,1fr);
+      gap:12px;
     }
 
-
-    th,
-    td {
-
-      padding:
-        11px
-        8px;
-
-      border-bottom:
-        1px solid
-        var(--border);
-
-      text-align:left;
-
+    .status-row {
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      padding:13px 0;
+      border-bottom:1px solid #25364a;
     }
 
-
-    th {
-
-      color:var(--muted);
-
-      font-size:12px;
-
+    .status-row:last-child {
+      border-bottom:0;
     }
 
-
-    .good {
-
-      color:var(--green);
-
+    .active {
+      color:#35d58a;
       font-weight:900;
-
     }
 
-
-    .warn {
-
-      color:var(--yellow);
-
+    .deferred {
+      color:#f3c95f;
       font-weight:900;
-
     }
 
-
-    .bad {
-
-      color:var(--red);
-
-      font-weight:900;
-
+    .empty {
+      padding:20px;
+      color:#93a4b8;
+      border:1px solid #2a3b50;
+      border-radius:17px;
     }
-
-
-    .muted-cell {
-
-      color:var(--muted);
-
-    }
-
-
-    .no-entry {
-
-      padding:18px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:16px;
-
-      color:var(--muted);
-
-      line-height:1.5;
-
-    }
-
 
     .footer {
-
-      margin-top:22px;
-
-      color:var(--muted);
-
+      color:#8294a8;
       font-size:12px;
-
       line-height:1.6;
-
+      margin-top:22px;
     }
 
+    @media(max-width:600px) {
 
-    .refresh {
-
-      display:inline-block;
-
-      margin-top:16px;
-
-      padding:
-        11px
-        15px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:12px;
-
-      color:var(--text);
-
-      text-decoration:none;
-
-      font-weight:900;
-
-    }
-
-
-    @media(max-width:760px) {
-
-      .topbar {
-        flex-direction:column;
-      }
-
-      .span8,
-      .span6,
-      .span4 {
-        grid-column:span 12;
-      }
-
-      .metric-row {
-        grid-template-columns:
-          repeat(2,1fr);
+      h1 {
+        font-size:34px;
       }
 
       .decision {
-        font-size:38px;
+        font-size:44px;
+      }
+
+      .health {
+        grid-template-columns:1fr;
       }
 
     }
@@ -565,289 +280,271 @@
 
 </head>
 
-
 <body>
 
-  <div class="wrap">
+  <main class="page">
 
+    <h1>
+      THE DAILY EDGE
+    </h1>
 
-    <div class="topbar">
-
-      <div>
-
-        <div class="brand">
-          THE DAILY EDGE
-        </div>
-
-        <div class="subtitle">
-          Live Analytics Dashboard
-          · MLB Pitcher Strikeouts
-        </div>
-
-      </div>
-
-
-      <div class="live">
-        LIVE MODEL
-      </div>
-
+    <div class="subtitle">
+      Live Analytics Dashboard
+      · MLB Pitcher Strikeouts
     </div>
 
+    <div class="live">
+      LIVE MODEL
+    </div>
 
     <div class="updated">
 
       LAST UPDATED:
 
       <strong>
-        September 4, 2026 • 12:51 AM PT
+        September 4, 2026 • 1:00 AM PT
       </strong>
 
-      · Engine V1.3
+      <br>
 
-      · Run
-
-      33850589709
+      Engine V1.3
+      · Publisher V1.3.1
+      · Run 33851248301
 
     </div>
 
 
-    <div class="grid">
+    <section class="card">
 
+      <div class="eyebrow">
+        BEST AVAILABLE 3-MAN
+      </div>
 
-      <div class="card span8">
+      <div class="decision lean">
+        LEAN ⚠️
+      </div>
 
-        <div class="eyebrow">
-          Best 3-Man Power
-        </div>
+      <div class="official ">
+        NO OFFICIAL WAGER
+      </div>
 
+      <div class="version">
 
-        <div class="decision pass">
-          PASS ⛔
-        </div>
+        Engine:
+        <b>V1.3</b>
 
+        · Live Publisher:
+        <b>V1.3.1</b>
 
-        <div class="small">
+      </div>
 
-          Engine:
-
-          <span class="model">
-            V1.3
-          </span>
-
-          · Live Publisher:
-
-          <span class="model">
-            V1.3
-          </span>
-
-        </div>
-
-
-        <div class="legs">
-          
-
-        <div class="leg">
-
-          <div>
-
-            <div class="leg-name">
-              Z Cristopher Sánchez
-            </div>
-
-            <div class="leg-side more">
-              MORE 6.5 Ks
-            </div>
-
-          </div>
-
-          <div class="leg-prob">
-
-            <strong>
-              57.0%
-            </strong>
-
-            <span class="small">
-              Conservative
-            </span>
-
-          </div>
-
-        </div>
-
+      <div class="legs">
         
 
-        <div class="leg">
+    <div class="leg">
 
-          <div>
+      <div>
 
-            <div class="leg-name">
-              Ryan Feltner
-            </div>
+        <div class="player">
+          Cristopher Sánchez
+        </div>
 
-            <div class="leg-side more">
-              MORE 3.5 Ks
-            </div>
+        <div class="side more">
+          MORE
+          6.5 Ks
+        </div>
 
+      </div>
+
+      <div class="prob">
+
+        <strong>
+          57.1%
+        </strong>
+
+        <span>
+          Conservative
+        </span>
+
+      </div>
+
+    </div>
+
+    
+
+    <div class="leg">
+
+      <div>
+
+        <div class="player">
+          Ryan Feltner
+        </div>
+
+        <div class="side more">
+          MORE
+          3.5 Ks
+        </div>
+
+      </div>
+
+      <div class="prob">
+
+        <strong>
+          56.2%
+        </strong>
+
+        <span>
+          Conservative
+        </span>
+
+      </div>
+
+    </div>
+
+    
+
+    <div class="leg">
+
+      <div>
+
+        <div class="player">
+          Walker Buehler
+        </div>
+
+        <div class="side less">
+          LESS
+          4.5 Ks
+        </div>
+
+      </div>
+
+      <div class="prob">
+
+        <strong>
+          54.5%
+        </strong>
+
+        <span>
+          Conservative
+        </span>
+
+      </div>
+
+    </div>
+
+    
+      </div>
+
+      <div class="metrics">
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Payout
           </div>
 
-          <div class="leg-prob">
-
-            <strong>
-              56.2%
-            </strong>
-
-            <span class="small">
-              Conservative
-            </span>
-
+          <div class="metric-value">
+            6x
           </div>
 
         </div>
 
-        
+        <div class="metric">
 
-        <div class="leg">
-
-          <div>
-
-            <div class="leg-name">
-              Walker Buehler
-            </div>
-
-            <div class="leg-side less">
-              LESS 4.5 Ks
-            </div>
-
+          <div class="metric-label">
+            Joint Probability
           </div>
 
-          <div class="leg-prob">
-
-            <strong>
-              54.5%
-            </strong>
-
-            <span class="small">
-              Conservative
-            </span>
-
+          <div class="metric-value">
+            16.97%
           </div>
 
         </div>
 
-        
+        <div class="metric">
+
+          <div class="metric-label">
+            Break-even
+          </div>
+
+          <div class="metric-value">
+            16.67%
+          </div>
+
         </div>
 
+        <div class="metric">
 
-        <div class="metric-row">
-
-
-          <div class="metric">
-
-            <div class="label">
-              Payout
-            </div>
-
-            <div class="value">
-              6x
-            </div>
-
+          <div class="metric-label">
+            Official Stake
           </div>
 
-
-          <div class="metric">
-
-            <div class="label">
-              Joint Prob.
-            </div>
-
-            <div class="value">
-              16.93%
-            </div>
-
+          <div class="metric-value">
+            0.00u
           </div>
-
-
-          <div class="metric">
-
-            <div class="label">
-              Break-even
-            </div>
-
-            <div class="value">
-              16.67%
-            </div>
-
-          </div>
-
-
-          <div class="metric">
-
-            <div class="label">
-              Model Stake
-            </div>
-
-            <div class="value">
-              0.00u
-            </div>
-
-          </div>
-
 
         </div>
 
       </div>
 
-
-      <div class="card span4">
-
-        <div class="eyebrow">
-          Entry Health
-        </div>
-
-        <div class="section-title">
-          Model Confidence
-        </div>
+    </section>
 
 
-        <div
-          class="metric"
-          style="margin-bottom:12px"
-        >
+    <section class="card">
 
-          <div class="label">
-            Conservative ROI
-          </div>
+      <div class="eyebrow">
+        ENTRY HEALTH
+      </div>
 
-          <div class="value good">
-            +1.6%
-          </div>
+      <div class="section-title">
+        Model Confidence
+      </div>
 
-        </div>
-
-
-        <div
-          class="metric"
-          style="margin-bottom:12px"
-        >
-
-          <div class="label">
-            Stress ROI
-          </div>
-
-          <div class="value bad">
-            -8.9%
-          </div>
-
-        </div>
-
+      <div class="health">
 
         <div class="metric">
 
-          <div class="label">
+          <div class="metric-label">
+            Conservative ROI
+          </div>
+
+          <div class="metric-value positive">
+            +1.8%
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Stress ROI
+          </div>
+
+          <div class="metric-value negative">
+            -8.7%
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Qualified Legs
+          </div>
+
+          <div class="metric-value">
+            3
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
             Same-Game Pairs
           </div>
 
-          <div class="value">
+          <div class="metric-value">
             0
           </div>
 
@@ -855,419 +552,152 @@
 
       </div>
 
+    </section>
 
-      <div class="card span12">
 
-        <div class="eyebrow">
-          V1.3 Qualified Props
+    <section class="card">
+
+      <div class="eyebrow">
+        BANKROLL
+      </div>
+
+      <div class="section-title">
+        Current Position
+      </div>
+
+      <div class="metrics">
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Bankroll
+          </div>
+
+          <div class="metric-value">
+            $100.00
+          </div>
+
         </div>
 
-        <div class="section-title">
-          Current Model Board
+        <div class="metric">
+
+          <div class="metric-label">
+            1 Unit
+          </div>
+
+          <div class="metric-value">
+            $1.00
+          </div>
+
         </div>
 
+        <div class="metric">
 
-        <div style="overflow-x:auto">
+          <div class="metric-label">
+            Recommended
+          </div>
 
-          <table>
+          <div class="metric-value">
+            0.00u
+          </div>
 
-            <thead>
+        </div>
 
-              <tr>
+        <div class="metric">
 
-                <th>Player</th>
+          <div class="metric-label">
+            Dollars
+          </div>
 
-                <th>Side</th>
-
-                <th>Line</th>
-
-                <th>Model</th>
-
-                <th>Market</th>
-
-                <th>Conservative</th>
-
-                <th>Status</th>
-
-              </tr>
-
-            </thead>
-
-
-            <tbody>
-
-              
-
-    <tr>
-
-      <td>
-        Z Cristopher Sánchez
-      </td>
-
-      <td>
-        MORE
-      </td>
-
-      <td>
-        6.5
-      </td>
-
-      <td>
-        61.0%
-      </td>
-
-      <td>
-        51.2%
-      </td>
-
-      <td>
-        57.0%
-      </td>
-
-      <td class="good">
-        QUALIFIED
-      </td>
-
-    </tr>
-
-    
-
-    <tr>
-
-      <td>
-        Ryan Feltner
-      </td>
-
-      <td>
-        MORE
-      </td>
-
-      <td>
-        3.5
-      </td>
-
-      <td>
-        59.1%
-      </td>
-
-      <td>
-        52.4%
-      </td>
-
-      <td>
-        56.2%
-      </td>
-
-      <td class="good">
-        QUALIFIED
-      </td>
-
-    </tr>
-
-    
-
-    <tr>
-
-      <td>
-        Walker Buehler
-      </td>
-
-      <td>
-        LESS
-      </td>
-
-      <td>
-        4.5
-      </td>
-
-      <td>
-        57.3%
-      </td>
-
-      <td>
-        50.4%
-      </td>
-
-      <td>
-        54.5%
-      </td>
-
-      <td class="good">
-        QUALIFIED
-      </td>
-
-    </tr>
-
-    
-
-            </tbody>
-
-          </table>
+          <div class="metric-value">
+            $0.00
+          </div>
 
         </div>
 
       </div>
 
-
-      <div class="card span6">
-
-        <div class="eyebrow">
-          Bankroll
-        </div>
-
-        <div class="section-title">
-          Current Position
-        </div>
+    </section>
 
 
-        <div class="metric-row">
+    <section class="card">
 
-
-          <div class="metric">
-
-            <div class="label">
-              Starting
-            </div>
-
-            <div class="value">
-              $100
-            </div>
-
-          </div>
-
-
-          <div class="metric">
-
-            <div class="label">
-              Current
-            </div>
-
-            <div class="value">
-              $100
-            </div>
-
-          </div>
-
-
-          <div class="metric">
-
-            <div class="label">
-              Unit
-            </div>
-
-            <div class="value">
-              $1.00
-            </div>
-
-          </div>
-
-
-          <div class="metric">
-
-            <div class="label">
-              Official Bets
-            </div>
-
-            <div class="value">
-              0
-            </div>
-
-          </div>
-
-
-        </div>
-
+      <div class="eyebrow">
+        SYSTEM STATUS
       </div>
 
-
-      <div class="card span6">
-
-        <div class="eyebrow">
-          V1.3 System Status
-        </div>
-
-        <div class="section-title">
-          Model Inputs
-        </div>
-
-
-        <table>
-
-          <tbody>
-
-
-            <tr>
-
-              <td>
-                PrizePicks live board
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Sportsbook no-vig market
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Baseball Savant
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Opponent K profile
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Recent workload
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Posted batting order
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Pitcher handedness
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Opponent K% vs hand
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Weather uncertainty
-              </td>
-
-              <td class="good">
-                ACTIVE
-              </td>
-
-            </tr>
-
-
-            <tr>
-
-              <td>
-                Umpire adjustment
-              </td>
-
-              <td class="warn">
-                DEFERRED
-              </td>
-
-            </tr>
-
-
-          </tbody>
-
-        </table>
-
-
-        <a
-          href=""
-          class="refresh"
-          onclick="
-            location.reload();
-            return false;
-          "
-        >
-          ↻ Refresh Dashboard
-        </a>
-
+      <div class="section-title">
+        V1.3 Inputs
       </div>
 
+      <div class="status-row">
+        <span>PrizePicks live board</span>
+        <span class="active">ACTIVE</span>
+      </div>
 
-    </div>
+      <div class="status-row">
+        <span>Sportsbook no-vig market</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Baseball Savant</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Recent workload</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Posted batting order</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Pitcher handedness</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Opponent K% vs hand</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Weather uncertainty</span>
+        <span class="active">ACTIVE</span>
+      </div>
+
+      <div class="status-row">
+        <span>Umpire adjustment</span>
+        <span class="deferred">DEFERRED</span>
+      </div>
+
+    </section>
 
 
     <div class="footer">
 
       The Daily Edge is an analytics tool.
 
-      Probabilities and expected-value estimates
-      are not guarantees.
-
-      Confirm the player, line, MORE/LESS side
-      and actual PrizePicks payout immediately
-      before submitting an entry.
-
       PLAY means the entry passed the current
-      V1.3 model safeguards.
+      model safeguards.
 
-      LEAN and PASS receive zero official units.
+      LEAN and PASS are not official wagers
+      and receive 0 units.
+
+      Always confirm the live PrizePicks line,
+      MORE/LESS side and displayed payout
+      immediately before submission.
+
+      Model probabilities are estimates,
+      not guarantees.
 
     </div>
 
-
-  </div>
+  </main>
 
 </body>
 
