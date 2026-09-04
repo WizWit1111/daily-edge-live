@@ -27,7 +27,7 @@
     body {
       margin:0;
       background:#080d13;
-      color:#f5f7fa;
+      color:#f4f7fb;
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -48,7 +48,7 @@
     }
 
     .subtitle {
-      color:#93a4b8;
+      color:#92a4b8;
       margin-top:8px;
       font-size:17px;
     }
@@ -66,33 +66,33 @@
 
     .updated {
       margin:25px 0;
-      color:#93a4b8;
-      line-height:1.5;
+      color:#92a4b8;
+      line-height:1.55;
     }
 
     .updated strong {
-      color:#f5f7fa;
+      color:#f4f7fb;
     }
 
     .card {
       background:#111a25;
-      border:1px solid #2a3b50;
+      border:1px solid #2b3c51;
       border-radius:22px;
       padding:22px;
       margin-bottom:18px;
     }
 
     .eyebrow {
-      color:#96a8bd;
+      color:#97a9bd;
       font-size:13px;
       font-weight:900;
       letter-spacing:.15em;
     }
 
     .decision {
-      font-size:48px;
+      font-size:46px;
       font-weight:950;
-      margin:15px 0 6px;
+      margin:14px 0 5px;
     }
 
     .play {
@@ -108,23 +108,14 @@
     }
 
     .official {
-      margin-bottom:20px;
+      color:#ff8a90;
       font-size:13px;
       font-weight:900;
-      color:#ff8a90;
+      margin-bottom:19px;
     }
 
-    .official.play-note {
+    .play-note {
       color:#35d58a;
-    }
-
-    .version {
-      color:#93a4b8;
-      margin-bottom:18px;
-    }
-
-    .version b {
-      color:#72aaff;
     }
 
     .legs {
@@ -135,10 +126,10 @@
     .leg {
       display:grid;
       grid-template-columns:1fr auto;
-      gap:12px;
+      gap:14px;
       padding:17px;
-      border:1px solid #2a3b50;
       border-radius:17px;
+      border:1px solid #2a3b50;
       background:#172231;
     }
 
@@ -167,14 +158,14 @@
 
     .prob strong {
       display:block;
-      font-size:27px;
+      font-size:25px;
     }
 
     .prob span {
       display:block;
-      color:#93a4b8;
-      font-size:12px;
       margin-top:3px;
+      color:#92a4b8;
+      font-size:12px;
     }
 
     .metrics {
@@ -185,6 +176,14 @@
       margin-top:18px;
     }
 
+    .health {
+      display:grid;
+      grid-template-columns:
+        repeat(2,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+
     .metric {
       background:#172231;
       border:1px solid #2a3b50;
@@ -193,31 +192,69 @@
     }
 
     .metric-label {
-      color:#93a4b8;
+      color:#92a4b8;
       font-size:13px;
     }
 
     .metric-value {
       margin-top:8px;
-      font-size:28px;
+      font-size:26px;
       font-weight:950;
-    }
-
-    .positive {
-      color:#35d58a;
-    }
-
-    .negative {
-      color:#ff676e;
     }
 
     .section-title {
-      font-size:21px;
+      font-size:22px;
       font-weight:950;
-      margin:8px 0 17px;
+      margin:8px 0 16px;
     }
 
-    .health {
+    .single {
+      padding:17px;
+      border:1px solid #2a3b50;
+      border-radius:18px;
+      background:#172231;
+      margin-bottom:12px;
+    }
+
+    .single-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:14px;
+    }
+
+    .single-status {
+      font-size:17px;
+      font-weight:950;
+    }
+
+    .single-grid {
+      display:grid;
+      grid-template-columns:
+        repeat(2,1fr);
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .single-grid div {
+      padding:12px;
+      background:#111a25;
+      border-radius:13px;
+    }
+
+    .single-grid span {
+      display:block;
+      color:#92a4b8;
+      font-size:12px;
+    }
+
+    .single-grid strong {
+      display:block;
+      margin-top:5px;
+      font-size:17px;
+    }
+
+    .bankroll-grid {
       display:grid;
       grid-template-columns:
         repeat(2,1fr);
@@ -227,9 +264,9 @@
     .status-row {
       display:flex;
       justify-content:space-between;
-      gap:15px;
+      gap:14px;
       padding:13px 0;
-      border-bottom:1px solid #25364a;
+      border-bottom:1px solid #26374a;
     }
 
     .status-row:last-child {
@@ -241,16 +278,11 @@
       font-weight:900;
     }
 
-    .deferred {
-      color:#f3c95f;
-      font-weight:900;
-    }
-
     .empty {
-      padding:20px;
-      color:#93a4b8;
       border:1px solid #2a3b50;
       border-radius:17px;
+      padding:18px;
+      color:#92a4b8;
     }
 
     .footer {
@@ -267,11 +299,7 @@
       }
 
       .decision {
-        font-size:44px;
-      }
-
-      .health {
-        grid-template-columns:1fr;
+        font-size:42px;
       }
 
     }
@@ -302,22 +330,24 @@
       LAST UPDATED:
 
       <strong>
-        September 4, 2026 • 1:00 AM PT
+        September 4, 2026 • 1:13 AM PT
       </strong>
 
       <br>
 
-      Engine V1.3
-      · Publisher V1.3.1
-      · Run 33851248301
+      Engine V1.4
+      · Publisher V1.4
+      · Run 33852318801
 
     </div>
 
 
+    
+
     <section class="card">
 
       <div class="eyebrow">
-        BEST AVAILABLE 3-MAN
+        BEST 3-MAN POWER
       </div>
 
       <div class="decision lean">
@@ -328,111 +358,101 @@
         NO OFFICIAL WAGER
       </div>
 
-      <div class="version">
-
-        Engine:
-        <b>V1.3</b>
-
-        · Live Publisher:
-        <b>V1.3.1</b>
-
-      </div>
-
       <div class="legs">
         
 
-    <div class="leg">
+        <div class="leg">
 
-      <div>
+          <div>
 
-        <div class="player">
-          Cristopher Sánchez
+            <div class="player">
+              Cristopher Sánchez
+            </div>
+
+            <div class="side more">
+              MORE
+              6.5 Ks
+            </div>
+
+          </div>
+
+          <div class="prob">
+
+            <strong>
+              57.1%
+            </strong>
+
+            <span>
+              Conservative
+            </span>
+
+          </div>
+
         </div>
 
-        <div class="side more">
-          MORE
-          6.5 Ks
+        
+
+        <div class="leg">
+
+          <div>
+
+            <div class="player">
+              Ryan Feltner
+            </div>
+
+            <div class="side more">
+              MORE
+              3.5 Ks
+            </div>
+
+          </div>
+
+          <div class="prob">
+
+            <strong>
+              56.2%
+            </strong>
+
+            <span>
+              Conservative
+            </span>
+
+          </div>
+
         </div>
 
-      </div>
+        
 
-      <div class="prob">
+        <div class="leg">
 
-        <strong>
-          57.1%
-        </strong>
+          <div>
 
-        <span>
-          Conservative
-        </span>
+            <div class="player">
+              Walker Buehler
+            </div>
 
-      </div>
+            <div class="side less">
+              LESS
+              4.5 Ks
+            </div>
 
-    </div>
+          </div>
 
-    
+          <div class="prob">
 
-    <div class="leg">
+            <strong>
+              54.5%
+            </strong>
 
-      <div>
+            <span>
+              Conservative
+            </span>
 
-        <div class="player">
-          Ryan Feltner
+          </div>
+
         </div>
 
-        <div class="side more">
-          MORE
-          3.5 Ks
-        </div>
-
-      </div>
-
-      <div class="prob">
-
-        <strong>
-          56.2%
-        </strong>
-
-        <span>
-          Conservative
-        </span>
-
-      </div>
-
-    </div>
-
-    
-
-    <div class="leg">
-
-      <div>
-
-        <div class="player">
-          Walker Buehler
-        </div>
-
-        <div class="side less">
-          LESS
-          4.5 Ks
-        </div>
-
-      </div>
-
-      <div class="prob">
-
-        <strong>
-          54.5%
-        </strong>
-
-        <span>
-          Conservative
-        </span>
-
-      </div>
-
-    </div>
-
-    
+        
       </div>
 
       <div class="metrics">
@@ -476,7 +496,7 @@
         <div class="metric">
 
           <div class="metric-label">
-            Official Stake
+            Stake
           </div>
 
           <div class="metric-value">
@@ -487,19 +507,6 @@
 
       </div>
 
-    </section>
-
-
-    <section class="card">
-
-      <div class="eyebrow">
-        ENTRY HEALTH
-      </div>
-
-      <div class="section-title">
-        Model Confidence
-      </div>
-
       <div class="health">
 
         <div class="metric">
@@ -508,7 +515,7 @@
             Conservative ROI
           </div>
 
-          <div class="metric-value positive">
+          <div class="metric-value">
             +1.8%
           </div>
 
@@ -520,20 +527,55 @@
             Stress ROI
           </div>
 
-          <div class="metric-value negative">
+          <div class="metric-value">
             -8.7%
           </div>
 
         </div>
 
+      </div>
+
+    </section>
+
+    
+
+
+    
+
+    <section class="card">
+
+      <div class="eyebrow">
+        BEST 6-MAN POWER
+      </div>
+
+      <div class="decision pass">
+        PASS ⛔
+      </div>
+
+      <div class="official ">
+        NO OFFICIAL WAGER
+      </div>
+
+      <div class="legs">
+        
+
+        <div class="empty">
+          Insufficient qualified legs.
+        </div>
+
+        
+      </div>
+
+      <div class="metrics">
+
         <div class="metric">
 
           <div class="metric-label">
-            Qualified Legs
+            Payout
           </div>
 
           <div class="metric-value">
-            3
+            37.5x
           </div>
 
         </div>
@@ -541,16 +583,91 @@
         <div class="metric">
 
           <div class="metric-label">
-            Same-Game Pairs
+            Joint Probability
           </div>
 
           <div class="metric-value">
-            0
+            —
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Break-even
+          </div>
+
+          <div class="metric-value">
+            —
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Stake
+          </div>
+
+          <div class="metric-value">
+            0.00u
           </div>
 
         </div>
 
       </div>
+
+      <div class="health">
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Conservative ROI
+          </div>
+
+          <div class="metric-value">
+            —
+          </div>
+
+        </div>
+
+        <div class="metric">
+
+          <div class="metric-label">
+            Stress ROI
+          </div>
+
+          <div class="metric-value">
+            —
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+
+
+    <section class="card">
+
+      <div class="eyebrow">
+        STRAIGHT BET SHEET
+      </div>
+
+      <div class="section-title">
+        Best Available Singles
+      </div>
+
+      
+
+    <div class="empty">
+      No straight bets meet current safeguards.
+    </div>
+
+    
 
     </section>
 
@@ -565,7 +682,7 @@
         Current Position
       </div>
 
-      <div class="metrics">
+      <div class="bankroll-grid">
 
         <div class="metric">
 
@@ -591,30 +708,6 @@
 
         </div>
 
-        <div class="metric">
-
-          <div class="metric-label">
-            Recommended
-          </div>
-
-          <div class="metric-value">
-            0.00u
-          </div>
-
-        </div>
-
-        <div class="metric">
-
-          <div class="metric-label">
-            Dollars
-          </div>
-
-          <div class="metric-value">
-            $0.00
-          </div>
-
-        </div>
-
       </div>
 
     </section>
@@ -627,52 +720,42 @@
       </div>
 
       <div class="section-title">
-        V1.3 Inputs
+        V1.4 Modules
       </div>
 
       <div class="status-row">
-        <span>PrizePicks live board</span>
+        <span>V1.3 context engine</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Sportsbook no-vig market</span>
+        <span>3-Man optimizer</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Baseball Savant</span>
+        <span>6-Man optimizer</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Recent workload</span>
+        <span>Straight bet pricing</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Posted batting order</span>
+        <span>Sportsbook break-even</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Pitcher handedness</span>
+        <span>Singles EV</span>
         <span class="active">ACTIVE</span>
       </div>
 
       <div class="status-row">
-        <span>Opponent K% vs hand</span>
+        <span>Kelly staking</span>
         <span class="active">ACTIVE</span>
-      </div>
-
-      <div class="status-row">
-        <span>Weather uncertainty</span>
-        <span class="active">ACTIVE</span>
-      </div>
-
-      <div class="status-row">
-        <span>Umpire adjustment</span>
-        <span class="deferred">DEFERRED</span>
       </div>
 
     </section>
@@ -686,14 +769,15 @@
       model safeguards.
 
       LEAN and PASS are not official wagers
-      and receive 0 units.
+      and receive zero official units.
 
-      Always confirm the live PrizePicks line,
-      MORE/LESS side and displayed payout
+      Always confirm live PrizePicks lines,
+      MORE/LESS sides, displayed payouts,
+      sportsbook prices and player availability
       immediately before submission.
 
-      Model probabilities are estimates,
-      not guarantees.
+      Model probabilities and EV estimates
+      are not guarantees.
 
     </div>
 

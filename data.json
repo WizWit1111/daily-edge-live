@@ -1,61 +1,58 @@
 {
-  "engine_version": "V1.3",
-  "publisher_version": "V1.3.1",
-  "status": "LEAN",
-  "official_wager": false,
-  "payout": 6.0,
+  "version": "V1.4",
+  "generated_utc": "2026-09-04T08:13:23.709432+00:00",
+  "v13_run_id": "33852330386",
   "bankroll": 100.0,
   "unit_size": 1.0,
-  "qualified_legs": 3,
-  "legs": [
-    {
-      "player": "Cristopher Sánchez",
-      "team": "PHI",
-      "opponent": "ATL",
-      "line": 6.5,
-      "side": "MORE",
-      "model": 0.610265,
-      "market": 0.51654,
-      "conservative": 0.571265,
-      "confirmed_lineup": false,
-      "context_score": 3.0,
-      "qualified": true
-    },
-    {
-      "player": "Ryan Feltner",
-      "team": "COL",
-      "opponent": "STL",
-      "line": 3.5,
-      "side": "MORE",
-      "model": 0.590751,
-      "market": 0.52386,
-      "conservative": 0.561952,
-      "confirmed_lineup": false,
-      "context_score": 3.0,
-      "qualified": true
-    },
-    {
-      "player": "Walker Buehler",
-      "team": "SD",
-      "opponent": "NYY",
-      "line": 4.5,
-      "side": "LESS",
-      "model": 0.572952,
-      "market": 0.50416,
-      "conservative": 0.544965,
-      "confirmed_lineup": false,
-      "context_score": 3.0,
-      "qualified": true
-    }
-  ],
-  "conservative_joint": 0.16969817943273194,
-  "break_even": 0.16666666666666666,
-  "conservative_roi": 0.018189076596391685,
-  "stress_roi": -0.08720221550774221,
-  "same_game_pairs": 0,
-  "recommended_units": 0.0,
-  "recommended_dollars": 0.0,
-  "updated_display": "September 4, 2026 • 1:00 AM PT",
-  "updated_iso": "2026-09-04T08:00:06.274718+00:00",
-  "engine_run_id": "33851248301"
+  "payout_3": 6.0,
+  "payout_6": 37.5,
+  "qualified_leg_count": 3,
+  "three_man": {
+    "decision": "LEAN",
+    "legs": [
+      {
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "opponent": "ATL",
+        "side": "MORE",
+        "line": 6.5,
+        "model_probability": 0.610265,
+        "market_probability": 0.51654,
+        "conservative_probability": 0.571265
+      },
+      {
+        "player": "Ryan Feltner",
+        "team": "COL",
+        "opponent": "STL",
+        "side": "MORE",
+        "line": 3.5,
+        "model_probability": 0.590751,
+        "market_probability": 0.52386,
+        "conservative_probability": 0.561952
+      },
+      {
+        "player": "Walker Buehler",
+        "team": "SD",
+        "opponent": "NYY",
+        "side": "LESS",
+        "line": 4.5,
+        "model_probability": 0.572952,
+        "market_probability": 0.50416,
+        "conservative_probability": 0.544965
+      }
+    ],
+    "conservative_joint": 0.16969817943273194,
+    "break_even": 0.16666666666666666,
+    "conservative_roi": 0.018189076596391685,
+    "stress_roi": -0.08720221550774221,
+    "same_game_pairs": 0,
+    "recommended_units": 0.0,
+    "recommended_dollars": 0.0
+  },
+  "six_man": {
+    "decision": "PASS",
+    "legs": [],
+    "recommended_units": 0.0
+  },
+  "singles": []
 }
