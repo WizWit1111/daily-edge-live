@@ -1,43 +1,45 @@
 {
-  "model_version": "V1.2.3",
-  "engine_version": "V1.2.2",
+  "engine_version": "V1.3",
+  "publisher_version": "V1.3",
   "status": "PASS",
   "payout": 6.0,
+  "bankroll": 100.0,
+  "unit_size": 1.0,
   "legs": [
     {
-      "player": "Jameson Taillon",
-      "side": "MORE",
-      "line": 2.5,
-      "model": 69.7,
-      "market": 52.9,
-      "conservative": 63.1
-    },
-    {
-      "player": "Cristopher Sánchez",
+      "player": "Z Cristopher Sánchez",
       "side": "MORE",
       "line": 6.5,
-      "model": 62.4,
+      "model": 61.0,
       "market": 51.2,
-      "conservative": 58.1
+      "conservative": 57.0
     },
     {
       "player": "Ryan Feltner",
       "side": "MORE",
       "line": 3.5,
-      "model": 60.1,
+      "model": 59.1,
       "market": 52.4,
-      "conservative": 57.0
+      "conservative": 56.2
+    },
+    {
+      "player": "Walker Buehler",
+      "side": "LESS",
+      "line": 4.5,
+      "model": 57.3,
+      "market": 50.4,
+      "conservative": 54.5
     }
   ],
-  "raw_joint": 26.12,
-  "conservative_joint": 20.27,
+  "raw_joint": 20.66,
+  "conservative_joint": 16.93,
   "break_even": 16.67,
-  "conservative_roi": 21.6,
-  "stress_roi": 9.7,
+  "conservative_roi": 1.6,
+  "stress_roi": -8.9,
   "same_game_pairs": 0,
-  "recommended_units": 1.08,
-  "recommended_dollars": 1.08,
-  "updated_display": "September 4, 2026 • 12:01 AM PT",
-  "updated_iso": "2026-09-04T07:01:21.949268+00:00",
-  "engine_run_id": "33846227915"
+  "recommended_units": 0.0,
+  "recommended_dollars": 0.0,
+  "updated_display": "September 4, 2026 • 12:41 AM PT",
+  "updated_iso": "2026-09-04T07:41:16.525904+00:00",
+  "engine_run_id": "33849756328"
 }
