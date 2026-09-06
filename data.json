@@ -1,58 +1,94 @@
 {
-  "version": "V1.4",
-  "generated_utc": "2026-09-04T08:13:23.709432+00:00",
-  "v13_run_id": "33852330386",
-  "bankroll": 100.0,
-  "unit_size": 1.0,
-  "payout_3": 6.0,
-  "payout_6": 37.5,
-  "qualified_leg_count": 3,
-  "three_man": {
-    "decision": "LEAN",
-    "legs": [
-      {
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "opponent": "ATL",
-        "side": "MORE",
-        "line": 6.5,
-        "model_probability": 0.610265,
-        "market_probability": 0.51654,
-        "conservative_probability": 0.571265
-      },
-      {
-        "player": "Ryan Feltner",
-        "team": "COL",
-        "opponent": "STL",
-        "side": "MORE",
-        "line": 3.5,
-        "model_probability": 0.590751,
-        "market_probability": 0.52386,
-        "conservative_probability": 0.561952
-      },
-      {
-        "player": "Walker Buehler",
-        "team": "SD",
-        "opponent": "NYY",
-        "side": "LESS",
-        "line": 4.5,
-        "model_probability": 0.572952,
-        "market_probability": 0.50416,
-        "conservative_probability": 0.544965
-      }
-    ],
-    "conservative_joint": 0.16969817943273194,
-    "break_even": 0.16666666666666666,
-    "conservative_roi": 0.018189076596391685,
-    "stress_roi": -0.08720221550774221,
-    "same_game_pairs": 0,
-    "recommended_units": 0.0,
-    "recommended_dollars": 0.0
+  "meta": {
+    "version": "V2",
+    "mode": "LIVE TESTING",
+    "headline": "The Daily Edge is live.",
+    "subtitle": "Architecture complete. Controlled live ingestion verified. Predictive validation remains evidence-gated.",
+    "updated_label": "Sep 6, 2026 · live test phase",
+    "sports": ["NFL", "MLB", "NBA", "NHL", "CFB", "WNBA", "SOCCER", "TENNIS", "GOLF"]
   },
-  "six_man": {
-    "decision": "PASS",
-    "legs": [],
-    "recommended_units": 0.0
+  "selections": [],
+  "watchlist": [
+    {
+      "sport": "NFL",
+      "market": "h2h",
+      "title": "New England Patriots",
+      "event": "Patriots @ Seahawks",
+      "side": "+150",
+      "line": "ML",
+      "book": "DraftKings snapshot",
+      "model_probability": null,
+      "edge": null,
+      "confidence": null,
+      "status": "LIVE TESTED",
+      "note": "Ingestion verified; model not yet promoted"
+    },
+    {
+      "sport": "NFL",
+      "market": "spreads",
+      "title": "New England Patriots +3.5",
+      "event": "Patriots @ Seahawks",
+      "side": "-115",
+      "line": "+3.5",
+      "book": "DraftKings snapshot",
+      "model_probability": null,
+      "edge": null,
+      "confidence": null,
+      "status": "LIVE TESTED",
+      "note": "Controlled capture only — not an official play"
+    },
+    {
+      "sport": "NFL",
+      "market": "totals",
+      "title": "Game Total 44.5",
+      "event": "Patriots @ Seahawks",
+      "side": "OVER -105",
+      "line": "44.5",
+      "book": "DraftKings snapshot",
+      "model_probability": null,
+      "edge": null,
+      "confidence": null,
+      "status": "LIVE TESTED",
+      "note": "Controlled capture only — not an official play"
+    }
+  ],
+  "dfs": [],
+  "combos": [],
+  "performance": {
+    "tracked": 0,
+    "win_rate": null,
+    "roi": null,
+    "yield": null,
+    "clv": null,
+    "units": 0,
+    "bankroll": 100
   },
-  "singles": []
+  "validation": [
+    {"sport": "NFL", "market": "core + props", "status": "LIVE TESTING"},
+    {"sport": "NBA", "market": "team + player props", "status": "HISTORICAL VALIDATION"},
+    {"sport": "MLB", "market": "game + player props", "status": "HISTORICAL VALIDATION"},
+    {"sport": "NHL", "market": "team + player props", "status": "HISTORICAL VALIDATION"}
+  ],
+  "system": [
+    {"label": "Architecture completion gate", "status": "GREEN"},
+    {"label": "Odds API controlled capture", "status": "VERIFIED"},
+    {"label": "Post-capture normalization", "status": "VERIFIED"},
+    {"label": "Probability models", "status": "ACTIVE"},
+    {"label": "Quantile / distribution engine", "status": "ACTIVE"},
+    {"label": "Residual / challenger engine", "status": "ACTIVE"},
+    {"label": "SportsDataverse features", "status": "ACTIVE"},
+    {"label": "SportsGameOdds adapter", "status": "ACTIVE"},
+    {"label": "PrizePicks / Underdog DFS adapter", "status": "ACTIVE"},
+    {"label": "Publication", "status": "BLOCKED"},
+    {"label": "Automated wagering", "status": "BLOCKED"}
+  ],
+  "live_test": {
+    "event": "New England Patriots @ Seattle Seahawks",
+    "event_id": "8c94552d022acec4a0458d70c19d3da9",
+    "markets": ["h2h", "spreads", "totals"],
+    "status": "CAPTURE VERIFIED",
+    "credits_used": 3,
+    "remaining_credits": 99974,
+    "run_id": 34020858143
+  }
 }
