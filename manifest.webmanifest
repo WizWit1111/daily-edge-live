@@ -1,0 +1,14 @@
+{
+  "name": "The Daily Edge V2",
+  "short_name": "Daily Edge",
+  "description": "Mobile sports analytics research dashboard.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#08101d",
+  "theme_color": "#08101d",
+  "icons": [
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
