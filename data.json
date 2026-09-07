@@ -7,6 +7,14 @@
     "updated_label": "Sep 6, 2026 · live test phase",
     "sports": ["NFL", "MLB", "NBA", "NHL", "CFB", "WNBA", "SOCCER", "TENNIS", "GOLF"]
   },
+  "refresh_control": {
+    "enabled": false,
+    "endpoint": null,
+    "estimated_credit_cost": 3,
+    "confirmation_required": true,
+    "status": "SECURE_BACKEND_REQUIRED",
+    "note": "Live paid refresh will be enabled only through the secure backend. Provider credentials are never exposed to the browser."
+  },
   "selections": [],
   "watchlist": [
     {
