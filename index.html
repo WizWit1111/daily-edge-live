@@ -21,7 +21,6 @@
         <div class="mark">DE</div>
         <div><div class="brand-name">THE DAILY EDGE</div><div class="brand-sub">V2 Research Intelligence</div></div>
       </div>
-      <button id="refreshBtn" class="icon-btn" aria-label="Refresh data">↻</button>
     </header>
 
     <main id="app" class="content" aria-live="polite">
@@ -47,6 +46,18 @@
       <section id="view-performance" class="view"></section>
       <section id="view-system" class="view"></section>
     </main>
+
+    <section class="live-control-dock" aria-label="Live market controls">
+      <button id="liveRefreshBtn" class="live-refresh-btn" type="button">
+        <span class="refresh-glyph">↻</span>
+        <span><strong>LIVE REFRESH</strong><small id="refreshHint">Secure refresh unavailable</small></span>
+      </button>
+      <div class="credit-meter">
+        <span>ODDS API</span>
+        <strong id="remainingCredits">—</strong>
+        <small>credits remaining</small>
+      </div>
+    </section>
 
     <nav class="bottom-nav" aria-label="Primary">
       <button class="nav-btn active" data-view="home"><span>⌂</span><small>Home</small></button>
